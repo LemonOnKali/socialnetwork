@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Social Network (PHP Course))</title>
+  <title>Social Network (PHP Course)</title>
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="img/icon.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -30,6 +30,11 @@
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item">
+          <form class="nav-link" method="get">
+            <input name="search" type="text"></input>
+          </form>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="?action=login" role="button">Login</a>
         </li>
         <li class="nav-item">
@@ -38,20 +43,9 @@
       </ul>
     </div>
   </header>
-
   <div class="container">
     <div class="row">
-      <div class="col">
-        <h1 class="display-4">KEEP CALM & LOVE FOXES</h1>
-        <blockquote class="blockquote text-center">
-          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-          <footer class="blockquote-footer">Maybe someone famous from <cite>Internet</cite></footer>
-        </blockquote>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
+      <div class="col-md-12">
         <?php
         if (isset($posts)) {
           foreach ($posts as $onePost) {
